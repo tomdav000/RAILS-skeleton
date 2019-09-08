@@ -1,0 +1,10 @@
+<h1>Index of Models</h1>
+
+<% @models.each do |model| %>
+	<%= link_to model.name, model_path(model) %> | <%= link_to 'edit', edit_model_path(model) %> |
+	<%= link_to 'delete', model, method: :delete, data:{confirm: 'Are you sure you want to delete this?'} %>
+	<br/><br/>
+<%end%>
+<br/><br/>
+<%= link_to 'index', root_path %>
+<%= link_to 'new', new_model_path %>

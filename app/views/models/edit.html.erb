@@ -1,0 +1,8 @@
+<h1>Update Model</h1>
+
+<%= form_for @model do |model|  %>
+	<p><%= model.text_field :name %></p>
+	<%= model.submit %>
+<% end %>
+<br/> <br/>
+<%= link_to 'index', root_path %>
