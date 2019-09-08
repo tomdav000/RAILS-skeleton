@@ -1,0 +1,318 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateModels (20190904001057)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "models" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190904001057_create_models.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190904001057"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-04 00:12:00.818290"], ["updated_at", "2019-09-04 00:12:00.818290"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-09-03 19:28:02 -0500
+  [1m[35m (40.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Macuser/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (25.0ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (40.9ms)
+Started GET "/" for ::1 at 2019-09-03 19:28:10 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (91.4ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (95.3ms)
+Completed 200 OK in 12981ms (Views: 12661.7ms | ActiveRecord: 25.4ms)
+
+
+Completed 200 OK in 6151ms (Views: 6055.6ms | ActiveRecord: 91.4ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:28:21 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/models/new" for ::1 at 2019-09-03 19:28:24 -0500
+Processing by ModelsController#new as HTML
+  Rendering models/new.html.erb within layouts/application
+  Rendered models/new.html.erb within layouts/application (192.7ms)
+Completed 200 OK in 257ms (Views: 225.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/models" for ::1 at 2019-09-03 19:28:32 -0500
+Processing by ModelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z8LaG9w+c2Wp4Z6kUTkBFbBdRxpWBysWPdlgMwcbLIwhXzvxuHMD/TiLztNNM0rMF0BaQXJbuZteS3kHajUc8g==", "model"=>{"name"=>"Miran"}, "commit"=>"Create Model"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:15
+  [1m[36mModel Create (19.0ms)[0m  [1m[32mINSERT INTO "models" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Miran"], ["created_at", "2019-09-04 00:28:32.948830"], ["updated_at", "2019-09-04 00:28:32.948830"]]
+  ↳ app/controllers/models_controller.rb:15
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 21.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:28:32 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 83ms (Views: 79.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/models/new" for ::1 at 2019-09-03 19:28:36 -0500
+Processing by ModelsController#new as HTML
+  Rendering models/new.html.erb within layouts/application
+  Rendered models/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for ::1 at 2019-09-03 19:28:55 -0500
+Processing by ModelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dCSKIdiIK5EHWinKMYVU5vnHmdZMXyeRJBXyAbgTCBwyuWvLvMVbCZYweb0tjx8/XtqEjWgDtRxHh+s11T04Yg==", "model"=>{"name"=>"Gabrielle/Kim"}, "commit"=>"Create Model"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:15
+  [1m[36mModel Create (52.1ms)[0m  [1m[32mINSERT INTO "models" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Gabrielle/Kim"], ["created_at", "2019-09-04 00:28:55.788400"], ["updated_at", "2019-09-04 00:28:55.788400"]]
+  ↳ app/controllers/models_controller.rb:15
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 62ms (ActiveRecord: 56.1ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:28:55 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 68ms (Views: 63.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:29:12 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 128ms (Views: 125.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:29:26 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 160ms (Views: 156.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/models/1" for ::1 at 2019-09-03 19:29:29 -0500
+Processing by ModelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/models_controller.rb:7
+  Rendering models/show.html.erb within layouts/application
+  Rendered models/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 116ms (Views: 40.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/models/1/edit" for ::1 at 2019-09-03 19:29:32 -0500
+Processing by ModelsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/models_controller.rb:24
+  Rendering models/edit.html.erb within layouts/application
+  Rendered models/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 67ms (Views: 43.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/models/1" for ::1 at 2019-09-03 19:29:45 -0500
+Processing by ModelsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ShEWy/LADcArroHYSf0QuWI9xIX3e3VFZZUzIIR2wygBfiV2VCTqS5H/WSiBiP0okSmc7w1xgIrfB04twgSs3g==", "model"=>{"name"=>"Miran Da Gift"}, "commit"=>"Update Model", "id"=>"1"}
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/models_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:29
+  [1m[36mModel Update (21.2ms)[0m  [1m[33mUPDATE "models" SET "name" = ?, "updated_at" = ? WHERE "models"."id" = ?[0m  [["name", "Miran Da Gift"], ["updated_at", "2019-09-04 00:29:45.834932"], ["id", 1]]
+  ↳ app/controllers/models_controller.rb:29
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:29
+Redirected to http://localhost:3000/models/1
+Completed 302 Found in 29ms (ActiveRecord: 22.7ms)
+
+
+Started GET "/models/1" for ::1 at 2019-09-03 19:29:45 -0500
+Processing by ModelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/models_controller.rb:7
+  Rendering models/show.html.erb within layouts/application
+  Rendered models/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 64ms (Views: 56.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:29:48 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 66ms (Views: 55.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/models/new" for ::1 at 2019-09-03 19:29:50 -0500
+Processing by ModelsController#new as HTML
+  Rendering models/new.html.erb within layouts/application
+  Rendered models/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 71ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for ::1 at 2019-09-03 19:30:01 -0500
+Processing by ModelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fHqk2VJcGZ+RJNHd/iFT6tHfF59iYvy+XB9MH6agfiA650UzNhFpBwBOgariKxgzdsIKxEY+bjM/jVUry45OXg==", "model"=>{"name"=>"Allanah Starr"}, "commit"=>"Create Model"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:15
+  [1m[36mModel Create (0.5ms)[0m  [1m[32mINSERT INTO "models" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Allanah Starr"], ["created_at", "2019-09-04 00:30:01.105287"], ["updated_at", "2019-09-04 00:30:01.105287"]]
+  ↳ app/controllers/models_controller.rb:15
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:30:01 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (18.3ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 84ms (Views: 47.8ms | ActiveRecord: 18.3ms)
+
+
+Started DELETE "/models/3" for ::1 at 2019-09-03 19:30:05 -0500
+Processing by ModelsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bJE3KDC3Uf0fUiSPUjL2I1P0N+N7J29vg/i1oXVasbsJlLcs9mxFvZFkv6eQxLJEo5c3kzIbrrLwh1IGJsjZ7w==", "id"=>"3"}
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/models_controller.rb:37
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:38
+  [1m[36mModel Destroy (15.3ms)[0m  [1m[31mDELETE FROM "models" WHERE "models"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/models_controller.rb:38
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:38
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:30:06 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 74ms (Views: 70.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/models/new" for ::1 at 2019-09-03 19:30:11 -0500
+Processing by ModelsController#new as HTML
+  Rendering models/new.html.erb within layouts/application
+  Rendered models/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 69ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for ::1 at 2019-09-03 19:30:17 -0500
+Processing by ModelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ByXjL1OIYjX3cXmppy19lz6fjnvmLJH0EVSHRcdnIuygXZm2QNREEa3lZG6lv4v++djYsvEIMqz10spejOs9Q==", "model"=>{"name"=>"Megan Snow"}, "commit"=>"Create Model"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:15
+  [1m[36mModel Create (0.6ms)[0m  [1m[32mINSERT INTO "models" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Megan Snow"], ["created_at", "2019-09-04 00:30:17.697150"], ["updated_at", "2019-09-04 00:30:17.697150"]]
+  ↳ app/controllers/models_controller.rb:15
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:30:17 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/models/4" for ::1 at 2019-09-03 19:30:19 -0500
+Processing by ModelsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/models_controller.rb:7
+  Rendering models/show.html.erb within layouts/application
+  Rendered models/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 133ms (Views: 48.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/models/4" for ::1 at 2019-09-03 19:30:21 -0500
+Processing by ModelsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8xrGXuh7tQEIJVUfbga/og7w0WDmHfjKFOLaV1WUoKqWH0ZaLqChQYYTzjes8PvF/pPREK8hORdnnT3wBgbI/g==", "id"=>"4"}
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/models_controller.rb:37
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/models_controller.rb:38
+  [1m[36mModel Destroy (0.4ms)[0m  [1m[31mDELETE FROM "models" WHERE "models"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/models_controller.rb:38
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/models_controller.rb:38
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2019-09-03 19:30:21 -0500
+Processing by ModelsController#index as HTML
+  Rendering models/index.html.erb within layouts/application
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT "models".* FROM "models"[0m
+  ↳ app/views/models/index.html.erb:3
+  Rendered models/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.3ms)
+
+
